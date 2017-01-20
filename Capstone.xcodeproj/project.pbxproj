@@ -8,17 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		D92AB3EA1E01E5A300100DC0 /* enterLocationForConcert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92AB3E91E01E5A300100DC0 /* enterLocationForConcert.swift */; };
+		D934EA081E2FCD9F00833565 /* InternetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D934EA071E2FCD9F00833565 /* InternetController.swift */; };
+		D94C5E691E2FD39400CE6EAB /* countriesToCities.json in Resources */ = {isa = PBXBuildFile; fileRef = D94C5E681E2FD39400CE6EAB /* countriesToCities.json */; };
+		D94C5E6B1E2FD41900CE6EAB /* StatesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94C5E6A1E2FD41900CE6EAB /* StatesController.swift */; };
+		D94C5E6D1E2FD7B400CE6EAB /* US_States.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94C5E6C1E2FD7B400CE6EAB /* US_States.swift */; };
+		D94C5E6F1E3016CA00CE6EAB /* Performers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94C5E6E1E3016CA00CE6EAB /* Performers.swift */; };
+		D94C5E711E317D2B00CE6EAB /* TopArtistByCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94C5E701E317D2B00CE6EAB /* TopArtistByCountry.swift */; };
 		D95A622D1DFB52FC00192A7F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95A622C1DFB52FC00192A7F /* MapKit.framework */; };
 		D95A622F1DFB6A0F00192A7F /* ConcertByLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95A622E1DFB6A0F00192A7F /* ConcertByLocation.swift */; };
 		D96FFAD91DFCABBE002085CA /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96FFAD81DFCABBE002085CA /* SettingViewController.swift */; };
 		D98C7D1D1E033FB800F6DAE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D98C7D1C1E033FB800F6DAE3 /* Main.storyboard */; };
+		D98F0FD71E327A5C00D7E2DA /* VenueInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98F0FD61E327A5C00D7E2DA /* VenueInfoViewController.swift */; };
+		D98F0FD91E327A6D00D7E2DA /* ArtistInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98F0FD81E327A6D00D7E2DA /* ArtistInfoViewController.swift */; };
 		D9A6AA731DF9C74C0038B8B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A6AA721DF9C74C0038B8B6 /* AppDelegate.swift */; };
 		D9A6AA7A1DF9C74C0038B8B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9A6AA791DF9C74C0038B8B6 /* Assets.xcassets */; };
 		D9A6AA7D1DF9C74C0038B8B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A6AA7B1DF9C74C0038B8B6 /* LaunchScreen.storyboard */; };
 		D9A6AA851DF9C86E0038B8B6 /* ConcertPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A6AA841DF9C86E0038B8B6 /* ConcertPageViewController.swift */; };
 		D9A6AA871DF9CE9E0038B8B6 /* SearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A6AA861DF9CE9E0038B8B6 /* SearchResultsTableViewController.swift */; };
 		D9A6AA891DF9CEB70038B8B6 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A6AA881DF9CEB70038B8B6 /* MapsViewController.swift */; };
-		D9A6AA8B1DF9CED00038B8B6 /* SavedResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A6AA8A1DF9CED00038B8B6 /* SavedResultsTableViewController.swift */; };
 		D9A6AA8E1DF9D4740038B8B6 /* Concert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A6AA8D1DF9D4740038B8B6 /* Concert.swift */; };
 		D9A6AA911DF9FCD20038B8B6 /* ConcertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A6AA901DF9FCD20038B8B6 /* ConcertController.swift */; };
 		D9A6AA941DF9FD470038B8B6 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A6AA931DF9FD470038B8B6 /* NetworkController.swift */; };
@@ -28,10 +35,18 @@
 
 /* Begin PBXFileReference section */
 		D92AB3E91E01E5A300100DC0 /* enterLocationForConcert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = enterLocationForConcert.swift; sourceTree = "<group>"; };
+		D934EA071E2FCD9F00833565 /* InternetController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InternetController.swift; path = ../InternetController.swift; sourceTree = "<group>"; };
+		D94C5E681E2FD39400CE6EAB /* countriesToCities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countriesToCities.json; sourceTree = "<group>"; };
+		D94C5E6A1E2FD41900CE6EAB /* StatesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatesController.swift; sourceTree = "<group>"; };
+		D94C5E6C1E2FD7B400CE6EAB /* US_States.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = US_States.swift; sourceTree = "<group>"; };
+		D94C5E6E1E3016CA00CE6EAB /* Performers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Performers.swift; sourceTree = "<group>"; };
+		D94C5E701E317D2B00CE6EAB /* TopArtistByCountry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopArtistByCountry.swift; sourceTree = "<group>"; };
 		D95A622C1DFB52FC00192A7F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D95A622E1DFB6A0F00192A7F /* ConcertByLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcertByLocation.swift; sourceTree = "<group>"; };
 		D96FFAD81DFCABBE002085CA /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		D98C7D1C1E033FB800F6DAE3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
+		D98F0FD61E327A5C00D7E2DA /* VenueInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueInfoViewController.swift; sourceTree = "<group>"; };
+		D98F0FD81E327A6D00D7E2DA /* ArtistInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistInfoViewController.swift; sourceTree = "<group>"; };
 		D9A6AA6F1DF9C74C0038B8B6 /* Capstone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capstone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9A6AA721DF9C74C0038B8B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9A6AA791DF9C74C0038B8B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,7 +55,6 @@
 		D9A6AA841DF9C86E0038B8B6 /* ConcertPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcertPageViewController.swift; sourceTree = "<group>"; };
 		D9A6AA861DF9CE9E0038B8B6 /* SearchResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewController.swift; sourceTree = "<group>"; };
 		D9A6AA881DF9CEB70038B8B6 /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
-		D9A6AA8A1DF9CED00038B8B6 /* SavedResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedResultsTableViewController.swift; sourceTree = "<group>"; };
 		D9A6AA8D1DF9D4740038B8B6 /* Concert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Concert.swift; sourceTree = "<group>"; };
 		D9A6AA901DF9FCD20038B8B6 /* ConcertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcertController.swift; sourceTree = "<group>"; };
 		D9A6AA931DF9FD470038B8B6 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
@@ -60,6 +74,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D934EA091E2FCDA800833565 /* Misc Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D94C5E681E2FD39400CE6EAB /* countriesToCities.json */,
+				D94C5E6C1E2FD7B400CE6EAB /* US_States.swift */,
+				D934EA071E2FCD9F00833565 /* InternetController.swift */,
+				D94C5E6A1E2FD41900CE6EAB /* StatesController.swift */,
+			);
+			name = "Misc Controllers";
+			sourceTree = "<group>";
+		};
 		D95A622B1DFB52FB00192A7F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,9 +114,11 @@
 			isa = PBXGroup;
 			children = (
 				D98C7D1C1E033FB800F6DAE3 /* Main.storyboard */,
+				D98F0FD61E327A5C00D7E2DA /* VenueInfoViewController.swift */,
+				D98F0FD81E327A6D00D7E2DA /* ArtistInfoViewController.swift */,
 				D9AE24E11DFF59D9009EE6D1 /* AnnotationView.swift */,
 				D9A6AA721DF9C74C0038B8B6 /* AppDelegate.swift */,
-				D96FFAD81DFCABBE002085CA /* SettingViewController.swift */,
+				D934EA091E2FCDA800833565 /* Misc Controllers */,
 				D9A6AA8C1DF9CED70038B8B6 /* Views */,
 				D9A6AA921DF9FCD60038B8B6 /* ModelController */,
 				D9A6AA8F1DF9FC320038B8B6 /* Model */,
@@ -105,8 +132,8 @@
 		D9A6AA8C1DF9CED70038B8B6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D96FFAD81DFCABBE002085CA /* SettingViewController.swift */,
 				D9A6AA841DF9C86E0038B8B6 /* ConcertPageViewController.swift */,
-				D9A6AA8A1DF9CED00038B8B6 /* SavedResultsTableViewController.swift */,
 				D9A6AA861DF9CE9E0038B8B6 /* SearchResultsTableViewController.swift */,
 				D9A6AA881DF9CEB70038B8B6 /* MapsViewController.swift */,
 				D9DA3BF71DFF63530038CE3A /* LocationController.swift */,
@@ -119,6 +146,8 @@
 			children = (
 				D9A6AA8D1DF9D4740038B8B6 /* Concert.swift */,
 				D95A622E1DFB6A0F00192A7F /* ConcertByLocation.swift */,
+				D94C5E6E1E3016CA00CE6EAB /* Performers.swift */,
+				D94C5E701E317D2B00CE6EAB /* TopArtistByCountry.swift */,
 				D92AB3E91E01E5A300100DC0 /* enterLocationForConcert.swift */,
 			);
 			name = Model;
@@ -160,7 +189,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Ghost;
 				TargetAttributes = {
 					D9A6AA6E1DF9C74C0038B8B6 = {
@@ -199,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D98C7D1D1E033FB800F6DAE3 /* Main.storyboard in Resources */,
+				D94C5E691E2FD39400CE6EAB /* countriesToCities.json in Resources */,
 				D9A6AA7D1DF9C74C0038B8B6 /* LaunchScreen.storyboard in Resources */,
 				D9A6AA7A1DF9C74C0038B8B6 /* Assets.xcassets in Resources */,
 			);
@@ -211,19 +241,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D94C5E6F1E3016CA00CE6EAB /* Performers.swift in Sources */,
 				D9A6AA941DF9FD470038B8B6 /* NetworkController.swift in Sources */,
 				D9AE24E21DFF59D9009EE6D1 /* AnnotationView.swift in Sources */,
 				D9A6AA851DF9C86E0038B8B6 /* ConcertPageViewController.swift in Sources */,
+				D94C5E711E317D2B00CE6EAB /* TopArtistByCountry.swift in Sources */,
 				D9A6AA731DF9C74C0038B8B6 /* AppDelegate.swift in Sources */,
 				D9DA3BF81DFF63530038CE3A /* LocationController.swift in Sources */,
-				D9A6AA8B1DF9CED00038B8B6 /* SavedResultsTableViewController.swift in Sources */,
+				D94C5E6D1E2FD7B400CE6EAB /* US_States.swift in Sources */,
+				D98F0FD91E327A6D00D7E2DA /* ArtistInfoViewController.swift in Sources */,
 				D9A6AA871DF9CE9E0038B8B6 /* SearchResultsTableViewController.swift in Sources */,
 				D96FFAD91DFCABBE002085CA /* SettingViewController.swift in Sources */,
 				D9A6AA8E1DF9D4740038B8B6 /* Concert.swift in Sources */,
 				D95A622F1DFB6A0F00192A7F /* ConcertByLocation.swift in Sources */,
+				D98F0FD71E327A5C00D7E2DA /* VenueInfoViewController.swift in Sources */,
+				D934EA081E2FCD9F00833565 /* InternetController.swift in Sources */,
 				D9A6AA891DF9CEB70038B8B6 /* MapsViewController.swift in Sources */,
 				D9A6AA911DF9FCD20038B8B6 /* ConcertController.swift in Sources */,
 				D92AB3EA1E01E5A300100DC0 /* enterLocationForConcert.swift in Sources */,
+				D94C5E6B1E2FD41900CE6EAB /* StatesController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +295,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -281,7 +318,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -309,6 +346,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -325,7 +363,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

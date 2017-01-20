@@ -13,6 +13,11 @@ import CoreLocation
 class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UITextFieldDelegate, UISearchBarDelegate {
     
     var arrayPin = [MKAnnotation]()
+    var DupPin = [MKAnnotation]()
+    var cityName = "Maps"
+    var stateName = ""
+    var countryName = ""
+    var stateTextfield: UITextField?
 
     
     override func viewDidLoad() {
@@ -35,8 +40,15 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
         RangeSearchBar.placeholder = "City Name, State"
         
         getVenueInfo()
-
         
+        if InternetConnection.isInternetAvailable() == true {
+            print("Do Nothing")
+        } else {
+            let internetAlert = UIAlertController(title: "Could not get venue information", message: "Please make sure your device is connected to the internet.", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            internetAlert.addAction(okAction)
+            present(internetAlert, animated: true, completion: nil)
+        }
     }
     
     @IBOutlet weak var RangeSearchBar: UISearchBar!
@@ -45,7 +57,7 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     func getVenueInfo(){
         
         guard let Location = locationManager.location
-            else { return  }
+            else {  return  }
         
         let latitude =  Location.coordinate.latitude
         let longitude = Location.coordinate.longitude
@@ -62,8 +74,9 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
                 let lon = venue.longitude
                 let name = venue.name
                 let address = venue.address
-                
                 let ex_address = venue.extended_address
+                self.cityName = venue.city
+                self.stateName = venue.state
                 
                 // let annotationView = MKPinAnnotationView()
                 
@@ -81,7 +94,7 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
                 
                 
                 DispatchQueue.main.async {
-                    
+                    self.navigationItem.title = "\(self.cityName + ", " + self.stateName)"
                     self.mapView.addAnnotations(self.arrayPin)
                 }
             }
@@ -104,12 +117,48 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
-        guard let searchTerm = RangeSearchBar.text else { return }
+        guard var searchTerm = RangeSearchBar.text else { return }
         RangeSearchBar.resignFirstResponder()
         
         ConcertController.shared.fetchVenueBySearch(searchTerm: searchTerm) { (ConcertLocation) in
             
             self.getInfo()
+            
+//            if  !searchTerm.contains(", ") || !searchTerm.contains(",") {
+//                let alertMap = UIAlertController(title: "No State", message: "Please Enter A State", preferredStyle: .alert)
+//                
+//
+////                alertMap.addTextField(configurationHandler: { (textField) in
+////                    textField.placeholder = "Enter State"
+////                    guard let searchText = textField.text else { return }
+////                   searchTerm = searchText
+////                    print(searchTerm)
+////                })
+//                
+//                
+////                let textAction = UIAlertAction(title: "Set Text", style: .default) { (_) in
+////                    
+////                }
+////                
+//                
+////                
+////                alertMap.addTextField { ( textField) in
+////                    textField = self.stateTextfield
+////                }
+////
+//                
+//                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+//                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+//               
+//                
+//                alertMap.addAction(okAction)
+//                alertMap.addAction(cancelAction)
+//                
+//                
+//                self.present(alertMap, animated: true, completion: nil)
+//                
+//            }
+            
             
             for venue in ConcertLocation {
                 
@@ -118,6 +167,9 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
                 let name = venue.name
                 let address = venue.address
                 let ex_address = venue.extended_address
+                self.cityName = venue.city
+                self.stateName = venue.state
+//                self.countryName = venue.
                 
                 let annotationView = MKPinAnnotationView()
                 
@@ -133,28 +185,46 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
                     NewPin.subtitle = ex_address
                 }
                 
-                self.arrayPin.append(NewPin)
                 
-                for items in self.arrayPin {
+                let originalArrayCount = self.arrayPin.count
                 
-                let noDup = items.coordinate
-                    
+                if originalArrayCount == (self.arrayPin.filter({$0.coordinate.latitude != NewPin.coordinate.latitude && $0.coordinate.longitude != NewPin.coordinate.longitude})).count {
+                    // If it gets in here, that means the pin didn't exist
+                    self.arrayPin.append(NewPin)
+                } else {
+                    self.DupPin.append(NewPin)
                 }
-                DispatchQueue.main.async {
-                    let all = self.mapView.annotations
-                    self.mapView.removeAnnotations(all)
-                    
-                    self.mapView.showAnnotations(self.arrayPin, animated: true)
-                    self.mapView.reloadInputViews()
-                    
-                    
+            }
+            print(self.DupPin.count)
+            print(self.arrayPin.count)
+
+//            for items in self.arrayPin {
+//
+//                let noDup = items.coordinate
+//                print(noDup)
+//            }
+            DispatchQueue.main.async {
+                let commaText = ", "
+                if self.stateName == "no state info available" {
+                    self.stateName = ""
+                    self.navigationItem.title = "\(self.cityName + self.stateName)"
+                } else {
+                self.navigationItem.title = "\(self.cityName + commaText + self.stateName)"
                 }
+                let all = self.mapView.annotations
+                self.mapView.removeAnnotations(all)
+                
+                self.mapView.showAnnotations(self.arrayPin, animated: true)
+                self.mapView.reloadInputViews()
+                
                 
             }
             
         }
         
     }
+    
+    
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -177,7 +247,6 @@ class MapsViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Errors" + error.localizedDescription)
     }
-    
     
 }
 

@@ -20,8 +20,10 @@ class ConcertByLocation {
     private let Klongitude = "lon"
     private let Klocation = "location"
     private let Kid = "id"
+    private let Kurl = "url"
+    private let kScore = "score"
     
-    //    var locationInfo : [[String: Any]] = []
+    //var locationInfo : [[String: Any]] = []
     
     var city: String
     var name: String
@@ -30,9 +32,27 @@ class ConcertByLocation {
     var state: String
     var latitude: Double
     var longitude: Double
+    var url: String
+    var score: Double
+    //Geolocation Dictionary
+//    let geoCity: String
+//    let display_name: String
+//    let country: String
+//    let lon: Double
+//    let lat: Double
+//    let geoState: String
+//    
+//    init(geoCity: String, display_name: String, country: String, lon: Double, lat: Double, geoState: String ) {
+//        self.geoCity = geoCity
+//        self.display_name = display_name
+//        self.country = country
+//        self.lon = lon
+//        self.lat = lat
+//        self.geoState = geoState
+//    }
     
     
-    init(city: String, name: String, extended_address: String, address: String, state: String, latitude: Double, longitude: Double) {
+    init(city: String, name: String, extended_address: String, address: String, state: String, latitude: Double, longitude: Double, url: String, score: Double) {
         self.city = city
         self.name = name
         self.extended_address = extended_address
@@ -40,6 +60,8 @@ class ConcertByLocation {
         self.state = state
         self.latitude = latitude
         self.longitude = longitude
+        self.url = url
+        self.score = score
     }
     
     
@@ -62,8 +84,34 @@ class ConcertByLocation {
         self.state = JsonDict[Kstate] as? String ?? "no state info available"
         self.latitude = latitude
         self.longitude = longitude
+        self.url = JsonDict[Kurl] as? String ?? "no url info available"
+        self.score = JsonDict[kScore] as? Double ?? 0
     }
 }
+
+
+// GeoLocation
+//extension ConcertByLocation {
+//    
+//    
+//    convenience init?(locationDict :[String:Any]) {
+//        guard let geoCity = locationDict["city"],
+//        let display_name = locationDict["display_name"],
+//        let country = locationDict["country"],
+//        let lon = locationDict["lon"],
+//        let lat = locationDict["lat"],
+//        let geoState = locationDict["geoState"]
+//        
+//    }
+    
+    
+    
+    
+    
+    
+    
+    
+
 
 //            var locationDic : [String:Any] = [:]
 //

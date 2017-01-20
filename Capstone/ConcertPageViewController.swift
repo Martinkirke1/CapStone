@@ -24,11 +24,11 @@ class ConcertPageViewController: UIPageViewController, UIPageViewControllerDataS
         
         let page1 = storyboard.instantiateViewController(withIdentifier: "SearchResultsView")
  //       let page2 = storyboard.instantiateViewController(withIdentifier: "MapViewController")
-        let page3 = storyboard.instantiateViewController(withIdentifier: "SavedView")
+//        let page3 = storyboard.instantiateViewController(withIdentifier: "SavedView")
         
         pages.append(page1)
 //        pages.append(page2)
-        pages.append(page3)
+//        pages.append(page3)
         
         setViewControllers([pages.first!], direction: UIPageViewControllerNavigationDirection.forward, animated: false, completion: nil)
         
